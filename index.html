@@ -51,6 +51,16 @@
             }
         }
         
+        .theme-dark {
+            background-color: black;
+            color: whitesmoke;
+        }
+        
+        .theme-light {
+            background-color: whitesmoke;
+            color: black;
+        }
+        
         img {
             border-radius: 5px;
             cursor: pointer;
@@ -112,7 +122,8 @@
     </style>
 </head>
 
-<body>
+<body class="theme-light">
+    <div><button onclick="toggleTheme()">Toggle theme</button></div>
     <div>
         <h2><span id="List_of_XP_Rewards">List of XP Rewards</span></h2>
         <h3><span id="XP_Rewards_for_Monster_Kills">XP Rewards for Monster Kills</span></h3>
@@ -260,6 +271,19 @@
                     previewImg.className = "modal-content";
                 }, 400);
             }
+        }
+    </script>
+
+    <script>
+        const lightTheme = "theme-light";
+        const darkTheme = "theme-dark"
+        activeTheme = lightTheme;
+
+        var body = document.body;
+
+        function toggleTheme() {
+            body.className = activeTheme === lightTheme ? darkTheme : lightTheme;
+            activeTheme = body.className
         }
     </script>
 </body>
