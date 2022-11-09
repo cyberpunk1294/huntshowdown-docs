@@ -1,0 +1,267 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunt DOCS</title>
+    <!-- <style>
+        img {
+            transition: -webkit-transform 0.25s ease;
+        }
+
+        img:active {
+            -webkit-transform: scale(4);
+        }
+    </style> -->
+    <style>
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(1)
+            }
+            to {
+                -webkit-transform: scale(2)
+            }
+        }
+        
+        @keyframes zoom {
+            from {
+                transform: scale(0.4)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        
+        @-webkit-keyframes zoom-out {
+            from {
+                transform: scale(1)
+            }
+            to {
+                transform: scale(0)
+            }
+        }
+        
+        @keyframes zoom-out {
+            from {
+                transform: scale(1)
+            }
+            to {
+                transform: scale(0)
+            }
+        }
+        
+        img {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: block;
+            /* margin-left: auto;
+            margin-right: auto */
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 99;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 75%;
+        }
+        
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        
+        .out {
+            animation-name: zoom-out;
+            animation-duration: 0.6s;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2><span id="List_of_XP_Rewards">List of XP Rewards</span></h2>
+        <h3><span id="XP_Rewards_for_Monster_Kills">XP Rewards for Monster Kills</span></h3>
+        <ul>
+            <li>Grunt: 10XP.</li>
+            <li>Leech: 10XP.</li>
+            <li>Hellhound: 20XP.</li>
+            <li>Waterdevil: 20XP.</li>
+            <li>Hive: 30XP.</li>
+            <li>Immolator: 50XP.</li>
+            <li>Armored: 60XP.</li>
+            <li>Meathead: 200XP.</li>
+            <li>Boss: 400XP.</li>
+        </ul>
+        <p></p>
+        <h3><span id="XP_Rewards_for_Hunters_Kills">XP Rewards for Hunters Kills</span></h3>
+        <ul>
+            <li>Way better: 750XP (2 arrows up).</li>
+            <li>Better: 500XP (1 arrow up).</li>
+            <li>Equal: 400XP (equal arrow).</li>
+            <li>Worse: 300XP (1 arrow down).</li>
+            <li>Way worse: 150XP (2 arrows down).</li>
+        </ul>
+        <p></p>
+        <h3><span id="How_to_Kill_the_Waterdevils">How to Kill the Waterdevils</span></h3>
+        <ul>
+            <li>4 compact bullets.</li>
+            <li>3 medium bullets.</li>
+            <li>2 long bullets.</li>
+            <li>2 throwing knives.</li>
+            <li>1 Crossbow bolt.</li>
+            <li>3 Hand Crossbow bolts.</li>
+            <li>1 Heavy axe/hammer swing.</li>
+            <li>2 Light axe/hammer swings.</li>
+            <li>9 Heavy fists attacks.</li>
+            <li>17 Light fists attacks.</li>
+        </ul>
+        <p></p>
+        <h3><span id="How_to_Kill_the_Meatheads">How to Kill the Meatheads</span></h3>
+        <ul>
+            <li>10 Long ammo.</li>
+            <li>11 Medium ammo.</li>
+            <li>12-14 Compact ammo.</li>
+            <li>6 Shotgun shots.</li>
+            <li>6 Hand Crossbow Poison shots.</li>
+            <li>6 Hand Crossbow Shots.</li>
+            <li>6 Bomb Lance heavy melee attacks.</li>
+            <li>6 Heavy Axe attacks.</li>
+            <li>8 Heavy Hammer attacks.</li>
+            <li>1 Nitro+(3 long ammo or 4 medium ammo).</li>
+            <li>Every dynamite in game can instantly kill them.</li>
+            <li>Burning him with lanterns is also effective.</li>
+        </ul>
+
+        <h2><span>Stalker Beetles Respawn</span></h2>
+        <h3><span>Legend:</span></h3>
+        <ul style="background-color: black; width: 200px;">
+            <li style="color: red">Permanent respawn</li>
+            <li style="color: green">Cart respawn</li>
+            <li style="color: blue">Possible respawn</li>
+            <li style="color: yellow">Groud Level</li>
+        </ul>
+        <h3><span>Stillwater Bayou</span></h3>
+        <figure>
+            <img src="./imgs/Stillwater Bayou.jpg" alt="" title="Stillwater Bayou" onclick="zoomImage(this)">
+        </figure>
+        <h3><span>Lawson Delta</span></h3>
+        <figure>
+            <img src="./imgs/Lawson Delta.jpg" alt="" title="Lawson Delta" onclick="zoomImage(this)">
+        </figure>
+        <h3><span>Desalle</span></h3>
+        <figure>
+            <img src="./imgs/Desalle.jpg" alt="" title="Desalle" onclick="zoomImage(this)">
+        </figure>
+    </div>
+    <h2><span>User Settings</span></h2>
+    <h3><span>Running arguments</span></h3>
+    <p>-cpuCount=12 -maxMem=10240 -maxVRAM=8010 +sys_spec 4</p>
+    <p>-cpuCount=12 -maxMem=10240 -maxVRAM=16368</p>
+
+    <h3><span>Game Settings</span></h3>
+    <h4><span>Sensitive</span></h4>
+    <figure>
+        <img src="./imgs/game_sensitive_1.png" alt="" title="Game" width="500" onclick="zoomImage(this)">
+    </figure>
+    <figure>
+        <img src="./imgs/game_sensitive_2.png" alt="" title="Game" width="500" onclick="zoomImage(this)">
+    </figure>
+    <figure>
+        <img src="./imgs/game_sensitive_3.png" alt="" title="Game" width="500" onclick="zoomImage(this)">
+    </figure>
+    <figure>
+        <img src="./imgs/game_sensitive_4.png" alt="" title="Game" width="500" onclick="zoomImage(this)">
+    </figure>
+
+    <h4><span>Graphics</span></h4>
+    <figure>
+        <img src="./imgs/graphics_1.png" alt="" title="Graphics" width="500" onclick="zoomImage(this)">
+    </figure>
+    <figure>
+        <img src="./imgs/graphics_2.png" alt="" title="Graphics" width="500" onclick="zoomImage(this)">
+    </figure>
+    <figure>
+        <img src="./imgs/graphics_3.png" alt="" title="Graphics" width="500" onclick="zoomImage(this)">
+    </figure>
+
+    <h4><span>Keys</span></h4>
+    <figure>
+        <img src="./imgs/keys_1.png" alt="" title="Keys" width="500" onclick="zoomImage(this)">
+    </figure>
+    <figure>
+        <img src="./imgs/keys_2.png" alt="" title="Keys" width="500" onclick="zoomImage(this)">
+    </figure>
+    <figure>
+        <img src="./imgs/keys_3.png" alt="" title="Keys" width="500" onclick="zoomImage(this)">
+    </figure>
+    <figure>
+        <img src="./imgs/keys_4.png" alt="" title="Keys" width="500" onclick="zoomImage(this)">
+    </figure>
+
+    <div id="modal" class="modal">
+        <img class="modal-content" id="previewImg">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        var modal = document.getElementById('modal');
+        var previewImg = document.getElementById("previewImg");
+        var captionText = document.getElementById("caption");
+
+        var currentImg;
+
+        function zoomImage(img) {
+            currentImg = img;
+
+            modal.style.display = "block";
+            previewImg.src = currentImg.src;
+            previewImg.alt = currentImg.alt;
+            captionText.innerHTML = currentImg.alt;
+
+            modal.onclick = function() {
+                previewImg.className += " out";
+                setTimeout(function() {
+                    modal.style.display = "none";
+                    previewImg.className = "modal-content";
+                }, 400);
+            }
+        }
+    </script>
+</body>
+
+</html>

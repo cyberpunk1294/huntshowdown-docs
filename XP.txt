@@ -1,0 +1,9 @@
+Grunt                10XP, 25~27WXP | 1500XP = x60 | 1230XP = x45 | ? 300XP = x30
+Hive                 30XP
+Hellhound(dog)       30XP
+Immolator            50XP
+Armored              60XP           | 300XP  = x5
+Waterdevil           60XP
+Meathead             200XP          | 400XP  = x2
+Boss                 ?XP
+Enemy Hunter         500XP          | 1000XP = x2
